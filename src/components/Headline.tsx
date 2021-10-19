@@ -20,8 +20,20 @@ function Headline() {
       >
         Software Development Engineer
       </Header>
-      <Button size='large'>View my work</Button>
-      <Button size='large'>Contact me</Button>
+      <Button
+        size='large'
+        as='a'
+        href='#projects'
+      >
+        View my work
+      </Button>
+      <Button
+        size='large'
+        as='a'
+        href='#contacts'
+      >
+        Contact me
+      </Button>
     </Container >
   );
 }
