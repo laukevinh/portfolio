@@ -35,6 +35,7 @@ function Project(props: ProjectProps) {
         target='_blank'
         href={url}
         inverted={inverted}
+        disabled={url === ""}
       >
         Visit
       </Button>
@@ -43,7 +44,9 @@ function Project(props: ProjectProps) {
 
   const imgGridColumn = (
     <Grid.Column width={8}>
-      <Image src={img} alt={title + " img"} />
+      <Container style={{ paddingTop: 150 }}>
+        <Image src={img} alt={title + " img"} />
+      </Container>
     </Grid.Column>
   );
 
