@@ -4,10 +4,11 @@ interface ProjectProps {
   title: string;
   description: string;
   url: string;
+  img: string;
 }
 
 function Project(props: ProjectProps) {
-  const { title, description, url } = props;
+  const { title, description, url, img } = props;
 
   return (
     <>
@@ -36,7 +37,7 @@ function Project(props: ProjectProps) {
         </Button>
       </Grid.Column>
       <Grid.Column width={4}>
-        <Image>Placeholder</Image>
+        <Image src={img} alt={title + " img"} />
       </Grid.Column>
     </>
   );
