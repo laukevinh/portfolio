@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Container } from 'semantic-ui-react';
 import './App.css';
+import ContactsContainer from './components/ContactsContainer';
+import HeadlineContainer from './components/HeadlineContainer';
+import ProjectsContainer from './components/ProjectsContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid>
+      <HeadlineContainer />
+      <ProjectsContainer />
+      <ContactsContainer />
+    </Container>
   );
 }
 
