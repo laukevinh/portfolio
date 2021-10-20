@@ -1,4 +1,4 @@
-import { Container, Grid } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import fantalytixImg from "../assets/fantalytix.png";
 import findbImg from "../assets/findb.png";
 import fitjImg from "../assets/fitj.png";
@@ -16,19 +16,18 @@ function ProjectsContainer() {
   };
 
   return (
-    <Container id='projects'>
-      <Grid style={{ minHeight: 800 }}>
-        {data.map(({ title, description, url }) => {
-          return (
-            <Project
-              title={title}
-              description={description}
-              url={url}
-              img={imgDict[title]}
-            />
-          );
-        })}
-      </Grid>
+    <Container id='projects' fluid>
+      {data.map(({ title, description, url }, index) => {
+        return (
+          <Project
+            title={title}
+            description={description}
+            url={url}
+            img={imgDict[title]}
+            inverted={index % 2 === 1}
+          />
+        );
+      })}
     </Container >
   );
 }
