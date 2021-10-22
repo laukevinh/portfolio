@@ -1,4 +1,5 @@
 import { Container } from "semantic-ui-react";
+import catoptImg from "../assets/catalog-optimization.png";
 import fantalytixImg from "../assets/fantalytix.png";
 import findbImg from "../assets/findb.png";
 import fitjImg from "../assets/fitj.png";
@@ -9,6 +10,7 @@ import Project from "./Project";
 function ProjectsContainer() {
   const data = projectData;
   let imgDict: { [title: string]: string } = {
+    "Catalog optimization": catoptImg,
     "FinDB": findbImg,
     "Splendor emulator": splendorImg,
     "Fantalytix": fantalytixImg,

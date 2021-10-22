@@ -1,5 +1,10 @@
 [
   {
+    "title": "Catalog optimization",
+    "description": "A Python text analysis program that analyzes invoice line items for potential over billing by comparing them to negotiated catalog rates.",
+    "url": ""
+  },
+  {
     "title": "FinDB",
     "description": "Web app for searching and analyzing stock and option trades of the U.S. House of Representatives.",
     "url": ""
@@ -11,7 +16,7 @@
   },
   {
     "title": "Splendor emulator",
-    "description": "React app recreation of the popular board game Splendor.",
+    "description": "The popular board game Splendor implemented in React.",
     "url": "https://laukevinh.github.io/react-splendor/"
   },
   {
