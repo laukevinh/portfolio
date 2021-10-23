@@ -10,6 +10,7 @@ interface ProjectProps {
 
 function Project(props: ProjectProps) {
   const { title, description, url, img, inverted } = props;
+  const spacing = 200;
 
   const textGridColumn = (
     <Grid.Column width={8}>
@@ -17,7 +18,7 @@ function Project(props: ProjectProps) {
         as='h1'
         style={{
           fontSize: '4em',
-          marginTop: '3em',
+          marginTop: spacing,
         }}
         inverted={inverted}
       >
@@ -43,10 +44,15 @@ function Project(props: ProjectProps) {
   );
 
   const imgGridColumn = (
-    <Grid.Column width={8}>
-      <Container style={{ paddingTop: 150 }}>
-        <Image src={img} alt={title + " img"} />
-      </Container>
+    <Grid.Column floated={inverted ? 'left' : 'right'} width={6}>
+      <Image
+        bordered
+        rounded
+        size='large'
+        src={img}
+        alt={title + " img"}
+        style={{ marginTop: spacing }}
+      />
     </Grid.Column>
   );
 
@@ -57,7 +63,7 @@ function Project(props: ProjectProps) {
       basic
       inverted={inverted}
       color={inverted ? "blue" : undefined}
-      style={{ paddingBottom: 200 }}
+      style={{ paddingBottom: spacing }}
     >
       <Container>
         <Grid>
