@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import App from '../app/App';
 
 export default function Home() {
 
@@ -10,16 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>
-          Kevin's Portfolio
-        </h1>
-        <ul>
-          <li>
-            <Link href='/details/catalog-optimization'>
-              <a>Catalog Optimization</a>
-            </Link>
-          </li>
-        </ul>
+        <App />
       </main>
     </div>
   );
