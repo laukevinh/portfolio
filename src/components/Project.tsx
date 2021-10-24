@@ -33,12 +33,11 @@ function Project(props: ProjectProps) {
       </Header>
       <Button
         as='a'
-        target='_blank'
         href={url}
         inverted={inverted}
         disabled={url === ""}
       >
-        Visit
+        Learn more
       </Button>
     </Grid.Column>
   );

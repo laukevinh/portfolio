@@ -2,7 +2,7 @@
   {
     "title": "Catalog optimization",
     "description": "A Python text analysis program that analyzes invoice line items for potential over billing by comparing them to negotiated catalog rates.",
-    "url": ""
+    "url": "/details/catalog-optimization"
   },
   {
     "title": "FinDB",
