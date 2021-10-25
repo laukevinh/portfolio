@@ -11,8 +11,8 @@
   },
   {
     "title": "Fantalytix",
-    "description": "Web app for analyzing fantasy basketball draft picks and weekly head to head competitions.",
-    "url": ""
+    "description": "Web app for analyzing fantasy basketball draft picks and mock draft simulator.",
+    "url": "https://fantasy-sports-tools.herokuapp.com/"
   },
   {
     "title": "Splendor emulator",
