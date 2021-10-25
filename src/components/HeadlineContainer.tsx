@@ -1,10 +1,19 @@
-import { Segment } from "semantic-ui-react";
-import Headline from "./Headline";
+import { ReactNode } from "react";
+import { Container, Header, Segment } from "semantic-ui-react";
 
-function HeadlineContainer() {
+interface IProps {
+  title: string;
+  description?: string;
+  inverted?: boolean;
+  children?: ReactNode;
+}
+
+function HeadlineContainer(props: IProps) {
+  const { title, description, inverted, children } = props;
+
   return (
     <Segment
-      inverted
+      inverted={inverted === undefined || inverted === true}
       textAlign='center'
       style={{
         minHeight: 800,
@@ -12,7 +21,26 @@ function HeadlineContainer() {
       }}
       vertical
     >
-      <Headline />
+      <Container text>
+        <Header
+          as='h1'
+          style={{
+            fontSize: '4em',
+            marginTop: '3em',
+          }}
+          inverted={inverted === undefined || inverted === true}
+        >
+          {title}
+        </Header>
+        <Header
+          as='h2'
+          style={{ fontSize: '1.5em' }}
+          inverted={inverted === undefined || inverted === true}
+        >
+          {description}
+        </Header>
+        {children}
+      </Container >
     </Segment>
   );
 }
