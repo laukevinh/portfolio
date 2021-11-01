@@ -21,12 +21,14 @@ function ProjectsContainer() {
     <Container id='projects' fluid>
       {data.map(({ title, description, url }, index) => {
         const img = imgDict[title];
+        const src: string = process.env.NODE_ENV === "production" ?
+          `${process.env.NEXT_PUBLIC_BASE_PATH}/${img.src}` : img.src;
         return (
           <Project
             title={title}
             description={description}
             url={url}
-            img={img.src}
+            img={src}
             inverted={index % 2 === 1}
           />
         );
