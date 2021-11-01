@@ -1,4 +1,4 @@
-import { Container, Divider } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import catoptImg from "../../public/assets/catalog-optimization.png";
 import fantalytixImg from "../../public/assets/fantalytix.png";
 import findbImg from "../../public/assets/findb.png";
@@ -19,19 +19,6 @@ function ProjectsContainer() {
 
   return (
     <Container id='projects' fluid>
-      {data.map(({ title, description, url }, index) => {
-        const img = imgDict[title];
-        return (
-          <Project
-            title={title}
-            description={description}
-            url={url}
-            img={img.src}
-            inverted={index % 2 === 1}
-          />
-        );
-      })}
-      <Divider />
       {data.map(({ title, description, url }, index) => {
         const img = imgDict[title];
         const src: string = process.env.NODE_ENV === "production" ?
