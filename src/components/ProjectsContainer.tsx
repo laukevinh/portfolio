@@ -9,7 +9,7 @@ import Project from "./Project";
 
 function ProjectsContainer() {
   const data = projectData;
-  let imgDict: { [title: string]: string } = {
+  let imgDict: { [title: string]: any } = {
     "Catalog optimization": catoptImg,
     "FinDB": findbImg,
     "Splendor emulator": splendorImg,
@@ -20,12 +20,13 @@ function ProjectsContainer() {
   return (
     <Container id='projects' fluid>
       {data.map(({ title, description, url }, index) => {
+        const img = imgDict[title];
         return (
           <Project
             title={title}
             description={description}
             url={url}
-            img={imgDict[title]}
+            img={img.src}
             inverted={index % 2 === 1}
           />
         );

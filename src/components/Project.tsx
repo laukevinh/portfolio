@@ -1,6 +1,4 @@
-import Image from 'next/image';
-import { Button, Container, Grid, Header, Segment } from "semantic-ui-react";
-import styles from "../styles/styles.module.css";
+import { Button, Container, Grid, Header, Image, Segment } from "semantic-ui-react";
 
 interface ProjectProps {
   title: string;
@@ -46,15 +44,14 @@ function Project(props: ProjectProps) {
 
   const imgGridColumn = (
     <Grid.Column floated={inverted ? 'left' : 'right'} width={6}>
-      {/* We must use Next.js Image because Semantic Image doesn't work */}
-      {/* We must also wrap Image with a div to apply styling beucase nothing else works */}
-      <div style={{ marginTop: spacing }}>
-        <Image
-          src={img}
-          alt={title + " img"}
-          className={`${styles.rounded} ${styles.bordered}`}
-        />
-      </div>
+      <Image
+        bordered
+        rounded
+        size='large'
+        src={img}
+        alt={title + " img"}
+        style={{ marginTop: spacing }}
+      />
     </Grid.Column>
   );
 
