@@ -26,7 +26,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "gh-pages-help": "gh-pages --help"
   },
   "eslintConfig": {
     "extends": [
