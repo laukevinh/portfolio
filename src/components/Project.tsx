@@ -1,16 +1,45 @@
+import Link from 'next/link';
 import { Button, Container, Grid, Header, Image, Segment } from "semantic-ui-react";
 
 interface ProjectProps {
   title: string;
   description: string;
+  internalRef: string;
   url: string;
   img: string;
   inverted: true | false;
 }
 
 function Project(props: ProjectProps) {
-  const { title, description, url, img, inverted } = props;
+  const { title, description, internalRef, url, img, inverted } = props;
   const spacing = 200;
+
+  const makeLinkComponent = () => {
+    if (internalRef === '' && url !== '') {
+      return (
+        <Button
+          as='a'
+          href={url}
+          inverted={inverted}
+          disabled={url === ""}
+        >
+          Visit
+        </Button>
+      );
+    } else {
+      return (
+        <Link href={internalRef}>
+          <Button
+            as='a'
+            inverted={inverted}
+            disabled={internalRef === ""}
+          >
+            Learn more
+          </Button>
+        </Link>
+      );
+    }
+  }
 
   const textGridColumn = (
     <Grid.Column width={8}>
@@ -31,14 +60,7 @@ function Project(props: ProjectProps) {
       >
         {description}
       </Header>
-      <Button
-        as='a'
-        href={url}
-        inverted={inverted}
-        disabled={url === ""}
-      >
-        Learn more
-      </Button>
+      {makeLinkComponent()}
     </Grid.Column>
   );
 

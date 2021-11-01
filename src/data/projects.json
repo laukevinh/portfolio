@@ -2,26 +2,31 @@
   {
     "title": "Catalog optimization",
     "description": "A Python text analysis program that analyzes invoice line items for potential over billing by comparing them to negotiated catalog rates.",
-    "url": "/details/catalog-optimization"
+    "internalRef": "/details/catalog-optimization",
+    "url": ""
   },
   {
     "title": "FinDB",
     "description": "Web app for searching and analyzing stock and option trades of the U.S. House of Representatives.",
-    "url": "/details/findb"
+    "internalRef": "/details/findb",
+    "url": ""
   },
   {
     "title": "Fantalytix",
     "description": "Web app for analyzing fantasy basketball draft picks and mock draft simulator.",
+    "internalRef": "",
     "url": "https://fantasy-sports-tools.herokuapp.com/"
   },
   {
     "title": "Splendor emulator",
     "description": "The popular board game Splendor implemented in React.",
+    "internalRef": "",
     "url": "https://laukevinh.github.io/react-splendor/"
   },
   {
     "title": "Fit-j",
     "description": "Django app that allows users to explore, share, and track fitness routines.",
+    "internalRef": "",
     "url": "http://fitj.herokuapp.com/"
   }
 ]

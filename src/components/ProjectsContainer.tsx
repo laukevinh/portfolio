@@ -19,7 +19,7 @@ function ProjectsContainer() {
 
   return (
     <Container id='projects' fluid>
-      {data.map(({ title, description, url }, index) => {
+      {data.map(({ title, description, internalRef, url }, index) => {
         const img = imgDict[title];
         const src: string = process.env.NODE_ENV === "production" ?
           `${process.env.NEXT_PUBLIC_BASE_PATH}/${img.src}` : img.src;
@@ -27,6 +27,7 @@ function ProjectsContainer() {
           <Project
             title={title}
             description={description}
+            internalRef={internalRef}
             url={url}
             img={src}
             inverted={index % 2 === 1}
